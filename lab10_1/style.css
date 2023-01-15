@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    background-color: black;
+}
+#box{
+    width: 1000px;
+    height: 700px;
+    background-color: black;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+#container{
+    width: 100vw;
+    height: 95vh;
+    background-image: url("img/1.jpg");
+    background-size: 100% 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    transition:  0.2s;
+    z-index: 10;
+    position: absolute;
+}
+#container:hover {
+    transform: translateY(-5%);
+}
+#conteinerup{
+    position: absolute;
+    width: 100vw;
+    height: 95vh;
+    background-image: url("img/1.jpg");
+    background-size: 100% 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    animation-name: slide;
+    animation-duration: 3s;
+    transform: translateY(-5%);
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+@keyframes slide {
+    from{
+        transform: translateY(-5%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+#lamp{
+    height: 270px;
+    margin-left: 360px;
+    z-index: 3;
+}
+#focus{
+    display: none;
+}
+#fairy {
+    margin-left: 225px;
+    margin-top: 150px;
+    width: 300px;
+    z-index: 1;
+    display: none;
+}
+.light {
+    position: absolute;
+    border-bottom: 600px solid yellow;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    width: 86px;
+    margin-top: 61px;
+    margin-left: 152px;
+    height: 0;
+    opacity: 0;
+    z-index: 9;
+    display: bock;
+    pointer-events: none;
+    animation: lighton ;
+    animation-duration: 0.2s ;
+}
+.light_on{
+    animation-name: lighton ;
+    animation-duration: 0.2s ;
+    animation-fill-mode: forwards;
+}
+.light_off{
+    animation-name: lightoff ;
+    animation-duration: 0.2s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lighton {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:0.5
+    }
+
+    
+}
+
+@keyframes lightoff {
+    from{
+        opacity:0.5;
+    }
+    to{
+        opacity:0;
+    }
+
+    
+}
+
+
+#hat{
+    top: 580px;
+    position: absolute;
+    width: 70px;
+    left:55vw;
+    z-index: 6;
+}
+.rabbit {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 450px;
+    left:55vw;
+    z-index: 6;
+
+
+}
+.moves_down {
+    
+    animation-name:down;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.moves_up{
+    display: block;
+    animation-name:up;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    from{
+        top: 450px;
+        opacity: 1;
+    }
+    to{
+        top: 600px;
+        opacity: 0;
+    }
+    
+}
+@keyframes up {
+    from{
+        top: 600px;
+        opacity: 0;
+    }
+    to{
+        top: 450px;
+        opacity: 1;
+    }
+    
+}
+
+.pigeon{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 450px;
+    left:55vw;
+    z-index: 5;
+    opacity: 1;
+    display: none;
+}
